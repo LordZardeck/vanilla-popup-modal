@@ -1,0 +1,19 @@
+{
+  "name": "vanilla-popup-modal",
+  "version": "0.0.0",
+  "homepage": "https://github.com/LordZardeck/vanilla-popup-modal",
+  "authors": [
+    "Sean Templeton <sean@blackfireweb.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
