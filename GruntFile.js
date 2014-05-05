@@ -6,6 +6,7 @@ module.exports = function (grunt) {
         uglifyFiles = {
             'build/vanilla-popup-modal.js': [
                 'build/modernizr.js',
+                'bower_components/get-size/get-size.js',
                 'src/**/*.js'
             ]
 
@@ -64,17 +65,9 @@ module.exports = function (grunt) {
 
     grunt.initConfig(gruntConfig);
 
-    grunt.registerTask('modernizrClosure', function() {
-        var output = 'window.' + gruntConfig.libraryName + ' = {}; (function(window){' +
-                        grunt.file.read(modernizrOutput) + '}).bind(window)(' +
-                        gruntConfig.libraryName + ');';
-
-        grunt.file.write(modernizrOutput, output);
-    });
-
     grunt.registerTask('cleanBuild', function() {
         grunt.file.delete(modernizrOutput);
     })
 
-    grunt.registerTask('build:dev', ['modernizr:dist', 'modernizrClosure', 'uglify:dev', 'cleanBuild']);
+    grunt.registerTask('build:dev', ['modernizr:dist', 'uglify:dev', 'cleanBuild']);
 }

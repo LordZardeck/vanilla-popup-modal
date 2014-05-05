@@ -15,5 +15,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "get-size": "desandro/get-size#~1.1.7",
+    "modernizr": "~2.8.1"
+  }
 }
